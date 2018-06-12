@@ -1,0 +1,10 @@
+﻿
+.report-row {
+    padding-top: 60px;
+}
+
+.table>tbody>tr>td, th , input  {
+    padding: 0px;
+    text-align: center;
+    font-size: 1.3rem;
+}
