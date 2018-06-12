@@ -58,6 +58,7 @@
     <Content Include="Content\Vendor\css\bootstrap.css.map" />
     <Content Include="Content\Vendor\css\bootstrap.min.css" />
     <Content Include="Content\Vendor\css\bootstrap.min.css.map" />
+    <Content Include="Content\Vendor\css\daterangepicker.css" />
     <Content Include="Content\Vendor\css\font-awesome.min.css" />
     <Content Include="Content\Vendor\css\fontawesome-all.min.css" />
     <Content Include="Content\Vendor\fonts\glyphicons-halflings-regular.eot" />
@@ -92,9 +93,12 @@
     <Content Include="Scripts\Vendor\js\bootstrap.js" />
     <Content Include="Scripts\Vendor\js\bootstrap.min.js" />
     <Content Include="Scripts\Vendor\js\Chart.bundle.min.js" />
+    <Content Include="Scripts\Vendor\js\daterangepicker.js" />
+    <Content Include="Scripts\Vendor\js\daterangepicker.min.js" />
     <Content Include="Scripts\Vendor\js\Gruntfile.js" />
     <Content Include="Scripts\Vendor\js\jquery-2.2.4.min.js" />
     <Content Include="Scripts\Vendor\js\jquery.validate.min.js" />
+    <Content Include="Scripts\Vendor\js\moment.min.js" />
     <Content Include="Scripts\Vendor\js\npm.js" />
   </ItemGroup>
 </Project>
