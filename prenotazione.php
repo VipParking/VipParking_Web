@@ -25,6 +25,49 @@
         <?php include('menu.php'); ?>
     </div>
     <div ng-controller="prenotazioneController">
+        <div class="fixed-top chart-fixed">            
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="container">
+                        <div class="row">
+                            <h5>La tua prenotazione</h5>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-1">
+                                <h6><strong>Vettura:</strong></h6>
+                            </div>
+                            <div class="col-xs-1 text-right">
+                                <h6> Auto</h6>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-1">
+                                <h6><strong>Periodo:</strong></h6>
+                            </div>
+                            <div class="col-xs-1 text-right">
+                                <h6> 12/06/2018 10:30<br />15/06/2018 18:30</h6>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-1">
+                                <h6><strong>Tipo parcheggio:</strong></h6>
+                            </div>
+                            <div class="col-xs-1 text-right">
+                                <h6> Coperto</h6>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-1">
+                                <h6><strong>TOTALE:</strong></h6>
+                            </div>
+                            <div class="col-xs-1 text-right">
+                                <h6> &euro;16</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="container">
             <div class="row report-row">
                 <h2 class="text-left">Nuova Prenotazione</h2>
@@ -39,52 +82,48 @@
                         </div>
                         <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                             <div class="panel-body">
-                                <div class="row">
-                                    <div class="col-xs-offset-3 col-xs-5">
-                                        <blockquote>
-                                            <h3>Tipologia di vettura*</h3>
-                                            <button type="button" class="btn btn-success btn-lg btn3d" ng-class="{ 'active':selectedTipoVeicolo == 'auto' ,'':selectedTipoVeicolo != 'auto'}" ng-click="selectTipoVeicolo('auto')">
-                                                <span class="fas fa-car"></span>
-                                                <br />
-                                                <span>Auto</span>
-                                            </button>
+                                <blockquote>
+                                    <div class="row">
+                                        <div class="col-md-offset-3 col-xs-5">
+                                                <h4>Tipologia di vettura*</h4>
+                                                <button type="button" class="btn btn-success btn-lg btn3d" ng-class="{ 'active':selectedTipoVeicolo == 'auto' ,'':selectedTipoVeicolo != 'auto'}" ng-click="selectTipoVeicolo('auto')">
+                                                    <span class="fas fa-car"></span>
+                                                    <br />
+                                                    <span>Auto</span>
+                                                </button>
 
-                                            <!-- Contextual button for informational alert messages -->
-                                            <button type="button" class="btn btn-info btn-lg btn3d" ng-class="{ 'active':selectedTipoVeicolo == 'moto' ,'':selectedTipoVeicolo != 'moto'}" ng-click="selectTipoVeicolo('moto')">
-                                                <span class="fas fa-motorcycle"></span>
-                                                <br />
-                                                <span>Moto</span>
-                                            </button>
+                                                <!-- Contextual button for informational alert messages -->
+                                                <button type="button" class="btn btn-info btn-lg btn3d" ng-class="{ 'active':selectedTipoVeicolo == 'moto' ,'':selectedTipoVeicolo != 'moto'}" ng-click="selectTipoVeicolo('moto')">
+                                                    <span class="fas fa-motorcycle"></span>
+                                                    <br />
+                                                    <span>Moto</span>
+                                                </button>
 
-                                            <!-- Indicates caution should be taken with this action -->
-                                            <button type="button" class="btn btn-warning btn-lg btn3d" ng-class="{ 'active':selectedTipoVeicolo == 'altro' ,'':selectedTipoVeicolo != 'altro'}" ng-click="selectTipoVeicolo('altro')">
-                                                <span class="fas fa-truck"></span>
-                                                <br />
-                                                <span>Altro</span>
-                                            </button>
-                                        </blockquote>
+                                                <!-- Indicates caution should be taken with this action -->
+                                                <button type="button" class="btn btn-warning btn-lg btn3d" ng-class="{ 'active':selectedTipoVeicolo == 'altro' ,'':selectedTipoVeicolo != 'altro'}" ng-click="selectTipoVeicolo('altro')">
+                                                    <span class="fas fa-truck"></span>
+                                                    <br />
+                                                    <span>Altro</span>
+                                                </button>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-xs-offset-3 col-xs-5">
-                                        <blockquote>
-                                            <h3>Periodo di permanenza*</h3>
-                                            <input type="text" name="datetimes" class="form-control" />
-                                        </blockquote>
+                                    <div class="row">
+                                        <div class="col-md-offset-3 col-xs-5">
+                                                <h4>Periodo di permanenza*</h4>
+                                                <input type="text" name="datetimes" class="form-control" />
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-xs-offset-3 col-xs-5">
-                                        <blockquote>
-                                            <h3>Tipo di Parcheggio*</h3>                                            
-                                            <select id="selectTipoParcheggio" class="form-control" >
-                                                <option selected="selected" value="all">Scoperto</option>
-                                                <option value="in">Coperto</option>
-                                                <option value="out">Coperto con Chiavi</option>
-                                            </select>
-                                        </blockquote>
+                                    <div class="row">
+                                        <div class="col-md-offset-3 col-xs-5">
+                                                <h4>Tipo di Parcheggio*</h4>                                            
+                                                <select id="selectTipoParcheggio" class="form-control" >
+                                                    <option selected="selected" value="all">Scoperto</option>
+                                                    <option value="in">Coperto</option>
+                                                    <option value="out">Coperto con Chiavi</option>
+                                                </select>
+                                        </div>
                                     </div>
-                                </div>
+                                </blockquote>
                             </div>
                         </div>
                     </div>
@@ -98,52 +137,48 @@
                         </div>
                         <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                             <div class="panel-body">
-                                <div class="row">
-                                    <div class="col-xs-offset-3 col-xs-5">
-                                        <blockquote>
-                                            <h3>Tipologia di vettura*</h3>
-                                            <button type="button" class="btn btn-success btn-lg btn3d" ng-class="{ 'active':selectedTipoVeicolo == 'auto' ,'':selectedTipoVeicolo != 'auto'}" ng-click="selectTipoVeicolo('auto')">
-                                                <span class="fas fa-car"></span>
-                                                <br />
-                                                <span>Auto</span>
-                                            </button>
-
-                                            <!-- Contextual button for informational alert messages -->
-                                            <button type="button" class="btn btn-info btn-lg btn3d" ng-class="{ 'active':selectedTipoVeicolo == 'moto' ,'':selectedTipoVeicolo != 'moto'}" ng-click="selectTipoVeicolo('moto')">
-                                                <span class="fas fa-motorcycle"></span>
-                                                <br />
-                                                <span>Moto</span>
-                                            </button>
-
-                                            <!-- Indicates caution should be taken with this action -->
-                                            <button type="button" class="btn btn-warning btn-lg btn3d" ng-class="{ 'active':selectedTipoVeicolo == 'altro' ,'':selectedTipoVeicolo != 'altro'}" ng-click="selectTipoVeicolo('altro')">
-                                                <span class="fas fa-truck"></span>
-                                                <br />
-                                                <span>Altro</span>
-                                            </button>
-                                        </blockquote>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-xs-offset-3 col-xs-5">
-                                        <blockquote>
-                                            <h3>Periodo di permanenza*</h3>
-                                            <input type="text" name="datetimes" class="form-control" />
-                                        </blockquote>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-xs-offset-3 col-xs-5">
-                                        <blockquote>
-                                            <h3>Tipo di Parcheggio*</h3>                                            
-                                            <select id="selectTipoParcheggio" class="form-control" >
-                                                <option selected="selected" value="all">Scoperto</option>
-                                                <option value="in">Coperto</option>
-                                                <option value="out">Coperto con Chiavi</option>
-                                            </select>
-                                        </blockquote>
-                                    </div>
-                                </div>                          
+                                <blockquote>
+                                    <div class="row">
+                                        <div class="col-md-offset-3 col-md-2 col-xs-5">
+                                                <h4>Cognome*</h4>
+                                                <input type="text" class="form-control" />
+                                        </div>
+                                        <div class="col-md-offset-1 col-md-2 col-xs-5"">
+                                                <h4>Nome*</h4>
+                                                <input type="text" class="form-control" />
+                                        </div>
+                                    </div>   
+                                    <div class="row">
+                                        <div class="col-md-offset-3 col-md-2 col-xs-5">
+                                                <h4>Passeggeri*</h4>
+                                                <input type="number" class="form-control" />
+                                        </div>
+                                        <div class="col-md-offset-1 col-md-2 col-xs-5"">
+                                                <h4>Convenzione**</h4>
+                                                <input type="text" class="form-control" />
+                                        </div>
+                                    </div>     
+                                    <div class="row">
+                                        <div class="col-md-offset-3 col-md-2 col-xs-5">
+                                                <h4>e-Mail*</h4>
+                                                <input type="email" class="form-control" />
+                                        </div>
+                                        <div class="col-md-offset-1 col-md-2 col-xs-5"">
+                                                <h4>Cellulare*</h4>
+                                                <input type="tel" class="form-control" />
+                                        </div>
+                                    </div>      
+                                    <div class="row">
+                                        <div class="col-md-offset-3 col-md-2 col-xs-5">
+                                                <h4>Modello Veicolo</h4>
+                                                <input type="text" class="form-control" />
+                                        </div>
+                                        <div class="col-md-offset-1 col-md-2 col-xs-5"">
+                                                <h4>Targa*</h4>
+                                                <input type="text" class="form-control" />
+                                        </div>
+                                    </div>   
+                                </blockquote>                       
                             </div>
                         </div>
                     </div>
@@ -151,13 +186,43 @@
                         <div class="panel-heading" role="tab" id="headingThree">
                             <h4 class="panel-title">
                                 <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    Collapsible Group Item #3
+                                    Servizi Extra
                                 </a>
                             </h4>
                         </div>
                         <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                             <div class="panel-body">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                <blockquote>
+                                    <div class="row">
+                                        <div class="col-md-offset-3 col-md-2 col-xs-5">
+                                                <h4>Lavaggio</h4>                                        
+                                                <select id="selectTipoParcheggio" class="form-control" >
+                                                    <option selected="selected" value="all">Nessun Lavaggio</option>
+                                                    <option value="in">Lavaggio Completo</option>
+                                                    <option value="out">Lavaggio Interni</option>
+                                                    <option value="out">Lavaggio Esterno</option>
+                                                </select>
+                                        </div>
+                                        <div class="col-md-offset-1 col-md-2 col-xs-5"">
+                                                <h4>Car Valet</h4>                                        
+                                                <select id="selectTipoParcheggio" class="form-control" >
+                                                    <option selected="selected" value="all">No</option>
+                                                    <option value="in">Solo Ingresso</option>
+                                                    <option value="out">Ingresso e Uscita</option>
+                                                </select>
+                                        </div>
+                                    </div>   
+                                    <div class="row">
+                                        <div class="col-md-offset-3 col-md-2 col-xs-5">
+                                                <h4>Sigla Volo Rientro</h4>
+                                                <input type="text" class="form-control" />
+                                        </div>
+                                        <div class="col-md-offset-1 col-md-2 col-xs-5">
+                                                <h4>Provenienza Volo</h4>
+                                                <input type="text" class="form-control" />
+                                        </div>
+                                    </div>
+                                </blockquote>    
                             </div>
                         </div>
                     </div>
