@@ -30,6 +30,7 @@
   <ItemGroup>
     <Folder Include="Content\" />
     <Folder Include="Content\Public\" />
+    <Folder Include="Content\Public\img\" />
     <Folder Include="Content\Public\logo\" />
     <Folder Include="Content\Public\styles\" />
     <Folder Include="Content\Vendor\" />
@@ -45,6 +46,8 @@
     <Folder Include="Scripts\Vendor\js\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Public\img\card-mark.png" />
+    <Content Include="Content\Public\img\paypal-mark.jpg" />
     <Content Include="Content\Public\loginStyles.css" />
     <Content Include="Content\Public\logo\logo.png" />
     <Content Include="Content\Public\styles\menu.css" />
@@ -86,6 +89,7 @@
     <Content Include="Scripts\Public\Controller\listatoUtentiController.js" />
     <Content Include="Scripts\Public\dashboard.js" />
     <Content Include="Scripts\Public\login.js" />
+    <Content Include="Scripts\Public\paypal_local.js" />
     <Content Include="Scripts\Public\report.js" />
     <Content Include="Scripts\Public\Service\prenotazioneService.js" />
     <Content Include="Scripts\Public\Service\listatoUtentiService.js" />
@@ -93,6 +97,7 @@
     <Content Include="Scripts\Vendor\js\bootstrap.js" />
     <Content Include="Scripts\Vendor\js\bootstrap.min.js" />
     <Content Include="Scripts\Vendor\js\Chart.bundle.min.js" />
+    <Content Include="Scripts\Vendor\js\checkout.js" />
     <Content Include="Scripts\Vendor\js\daterangepicker.js" />
     <Content Include="Scripts\Vendor\js\daterangepicker.min.js" />
     <Content Include="Scripts\Vendor\js\Gruntfile.js" />

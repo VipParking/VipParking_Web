@@ -1,5 +1,7 @@
 ﻿vipParkingApp.controller("prenotazioneController", ['$scope', "prenotazioneService", "$q", "$filter", function ($scope, prenotazioneService, $q, $filter) {
     $scope.selectedTipoVeicolo = '';
+    $scope.selezionaParcheggio = true;
+    $scope.selezionaPagamento = false;
 
     $scope.selectTipoVeicolo = function (tipo) {
         $scope.selectedTipoVeicolo = tipo;
@@ -45,5 +47,15 @@
             }
         });
     });
+
+    $scope.proseguiAcquisto = function () {
+        $scope.selezionaParcheggio = false;
+        $scope.selezionaPagamento = true;
+    };
+
+    $scope.ritornaSelezione = function () {
+        $scope.selezionaParcheggio = true;
+        $scope.selezionaPagamento = false;
+    };
    
 }]);

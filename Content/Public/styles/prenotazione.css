@@ -138,3 +138,35 @@
 .chart-fixed{
     width:220px;
 }
+
+@media screen and (max-width: 992px) {
+    .fixed-top {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+    }
+    .chart-fixed {
+        width: 100%;
+    }
+
+}
+
+.btn-dimension {
+    width: 100%;
+    height: 40px;
+}
+
+/* Media query for mobile viewport */
+@media screen and (max-width: 400px) {
+    #paypal-button-container {
+        width: 100%;
+    }
+}
+
+/* Media query for desktop viewport */
+@media screen and (min-width: 400px) {
+    #paypal-button-container {
+        width: 250px;
+        display: inline-block;
+    }
+}

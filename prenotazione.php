@@ -14,6 +14,7 @@
     <script src="Scripts\Public\appAngular.js" type="text/javascript"></script>
     <script src="Scripts\Public\Service\prenotazioneService.js" type="text/javascript"></script>
     <script src="Scripts\Public\Controller\prenotazioneController.js" type="text/javascript"></script>
+    <script src="Scripts\Vendor\js\checkout.js"></script>
 
     <title>Main Dashboard</title>
 </head>
@@ -25,52 +26,54 @@
         <?php include('menu.php'); ?>
     </div>
     <div ng-controller="prenotazioneController">
-        <div class="fixed-top chart-fixed">            
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    <div class="container">
-                        <div class="row">
-                            <h5>La tua prenotazione</h5>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-1">
-                                <h6><strong>Vettura:</strong></h6>
+        <div class="container" ng-show="selezionaParcheggio">
+             <div class="fixed-top chart-fixed">            
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="container">
+                            <div class="row">
+                                <h5>La tua prenotazione</h5>
                             </div>
-                            <div class="col-xs-1 text-right">
-                                <h6> Auto</h6>
+                            <div class="row">
+                                <div class="col-xs-1">
+                                    <h6><strong>Vettura:</strong></h6>
+                                </div>
+                                <div class="col-xs-1 text-right">
+                                    <h6> Auto</h6>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-1">
-                                <h6><strong>Periodo:</strong></h6>
+                            <div class="row">
+                                <div class="col-xs-1">
+                                    <h6><strong>Periodo:</strong></h6>
+                                </div>
+                                <div class="col-xs-1 text-right">
+                                    <h6> 12/06/2018 10:30<br />15/06/2018 18:30</h6>
+                                </div>
                             </div>
-                            <div class="col-xs-1 text-right">
-                                <h6> 12/06/2018 10:30<br />15/06/2018 18:30</h6>
+                            <div class="row">
+                                <div class="col-xs-1">
+                                    <h6><strong>Tipo parcheggio:</strong></h6>
+                                </div>
+                                <div class="col-xs-1 text-right">
+                                    <h6> Coperto</h6>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-1">
-                                <h6><strong>Tipo parcheggio:</strong></h6>
-                            </div>
-                            <div class="col-xs-1 text-right">
-                                <h6> Coperto</h6>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-1">
-                                <h6><strong>TOTALE:</strong></h6>
-                            </div>
-                            <div class="col-xs-1 text-right">
-                                <h6> &euro;16</h6>
+                            <div class="row">
+                                <div class="col-xs-1">
+                                    <h6><strong>TOTALE:</strong></h6>
+                                </div>
+                                <div class="col-xs-1 text-right">
+                                    <h6> &euro;16</h6>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="container">
             <div class="row report-row">
-                <h2 class="text-left">Nuova Prenotazione</h2>
+                <h2 class="text-left text-uppercase">la tua prenotazione</h2>
+            </div>
+            <div class="row report-row">
                 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                     <div class="panel panel-default">
                         <div class="panel-heading" role="tab" id="headingOne">
@@ -228,8 +231,49 @@
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-md-offset-8 col-xs-offset-2 col-md-4 col-xs-8">
+                    <button class="btn btn-info btn-dimension" ng-click="proseguiAcquisto()">Acquista</button>
+                </div>
+            </div>
         </div><!-- /container -->
+        <div class="container" ng-show="selezionaPagamento">            
+            <div class="row report-row">
+                <h2 class="text-left text-uppercase">Paga il tuo parcheggio</h2>
+            </div>
+            <div class="row report-row">
+                <div class="col-md-offset-1 col-md-2 col-xs-5">                    
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="payment-option" id="payPalRadio" value="paypal" checked>
+                        <img src="Content\Public\img\paypal-mark.jpg" alt="Pay with Paypal" />
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="payment-option" id="creditRadio" value="crediCard">
+                        <img height="48" src="Content\Public\img\card-mark.png" alt="Accepting Visa, Mastercard, Discover and American Express" />
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="payment-option" id="cashRadio" value="cash">
+                        <span class="far fa-money-bill-alt fa-4x green" style="height:48px"></span> 
+                      </label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-offset-1 col-md-offset-4 col-xs-5 col-md-4">
+                    <button class="btn btn-info btn-dimension" ng-click="ritornaSelezione()">Indietro</button>
+                </div>
+                <div class="col-xs-5 col-md-4">
+                    <div id="paypal-button-container"></div>
+                    <div id="card-button-container"><button class="btn btn-info btn-dimension">Paga</button></div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
-<!--<script src="Scripts\Public\dashboard.js" type="text/javascript"></sc<ript>-->
+    <script src="Scripts\Public\paypal_local.js"></script>
