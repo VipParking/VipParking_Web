@@ -5,15 +5,16 @@
     <meta itemprop="name" content="Vip Parking - tariffario" />
     <meta itemprop="description" content="Vip Parking tariffario" />
     <meta name="description" content="Vip Parking tariffario" />
-    <link href="Content\Public\styles\menu.css" rel="stylesheet" />
-    <link href="Content\Public\styles\vale.css" rel="stylesheet" />
-    <script src="Scripts\Vendor\js\Chart.bundle.min.js" type="text/javascript"></script>
-    <script src="Scripts\Vendor\js\angular.min.js" type="text/javascript"></script>
-    <script src="Scripts\Public\appAngular.js" type="text/javascript"></script>
+    <link href="..\Content\Public\styles\menu.css" rel="stylesheet" />
+    <link href="..\Content\Public\styles\vale.css" rel="stylesheet" />
+    <script src="..\Scripts\Vendor\js\Chart.bundle.min.js" type="text/javascript"></script>
     
      <title>Tariffario</title>
 </head>
 <body ng-app="vipParkingApp">
+    <?php
+    define("MenuLebel", "4");
+    ?>
     <div class="menuHeader">
         <?php include('menu.php'); ?>
     </div>
@@ -343,4 +344,4 @@
     </div><!-- /container -->
 </body>
 </html>
-<script src="Scripts\Public\report.js" type="text/javascript"></script>
+<script src="..\Scripts\Public\report.js" type="text/javascript"></script>

@@ -5,16 +5,17 @@
     <meta itemprop="name" content="Vip Parking report page" />
     <meta itemprop="description" content="Vip Parking report" />
     <meta name="description" content="Vip Parking report" />
-    <link href="Content\Public\styles\menu.css" rel="stylesheet" />
-    <script src="Scripts\Vendor\js\Chart.bundle.min.js" type="text/javascript"></script>
-    <script src="Scripts\Vendor\js\angular.min.js" type="text/javascript"></script>
-    <script src="Scripts\Public\appAngular.js" type="text/javascript"></script>
-    <script src="Scripts\Public\Service\listatoUtentiService.js" type="text/javascript"></script>
-    <script src="Scripts\Public\Controller\listatoUtentiController.js" type="text/javascript"></script>
+    <link href="..\Content\Public\styles\menu.css" rel="stylesheet" />
+    <script src="..\Scripts\Vendor\js\Chart.bundle.min.js" type="text/javascript"></script>
+    <script src="..\Scripts\Public\Service\listatoUtentiService.js" type="text/javascript"></script>
+    <script src="..\Scripts\Public\Controller\listatoUtentiController.js" type="text/javascript"></script>
 
     <title>Report</title>
 </head>
 <body ng-app="vipParkingApp">
+    <?php
+    define("MenuLebel", "3");
+    ?>
     <div class="menuHeader">
         <?php include('menu.php'); ?>
     </div>
@@ -64,4 +65,4 @@
     </div><!-- /container -->
 </body>
 </html>
-<script src="Scripts\Public\report.js" type="text/javascript"></script>
+<script src="..\Scripts\Public\report.js" type="text/javascript"></script>

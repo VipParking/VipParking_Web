@@ -41,6 +41,11 @@ body {
     height: 100%;
     background-repeat: no-repeat;
     background-color: #ebebeb;
+    padding-top: 65px;
+}
+
+.modal {
+    padding-top: 65px;
 }
 
 .green {

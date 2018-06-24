@@ -13,7 +13,7 @@
         <div class="card card-container">
             <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
             <p id="profile-name" class="profile-name-card"></p>
-            <form class="form-signin" action="mainDashboard.php">
+            <form class="form-signin" action="Views\mainDashboard.php">
                 <span id="reauth-email" class="reauth-email"></span>
                 <input type="text" id="inputText" class="form-control" placeholder="User ID" required autofocus>
                 <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>

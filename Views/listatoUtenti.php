@@ -1,22 +1,4 @@
 <div ng-controller="listatoUtentiController">
-    <!--<form class="form-inline">
-        <div class="form-group">
-            <input class="form-control" id="myInput" type="text" placeholder="Search.." ng-keyup="filterText($event)">
-        </div>
-        <div class="form-group">
-            <input type="date" id="dateSearch" class="form-control" ng-change="filterDate($event)" />
-        </div>
-        <div class="form-group">
-            <button class="btn btn-default dropdown-toggle" type="button" id="statoDropDown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                Stato
-                <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                <li><a href="#" ng-click="filterStato('in')">In arrivo</a></li>
-                <li><a href="#" ng-click="filterStato('out')">In partenza</a></li>
-            </ul>
-        </div>
-    </form>-->
     <div class="row">
         <div class="col-xs-4">
             <label for="myInput">Ricerca</label>
@@ -122,7 +104,7 @@
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-xs-offset-4 col-xs-6 col-md-6">
-                                    <a href="#" class="btn btn-success btn-lg" role="button"><span class="fas fa-key"></span> <br />Genera</a>
+                                    <a href="#" class="btn btn-success btn-lg" role="button" ng-click="generateRandomKey()" data-toggle="modal" data-target="#generaChiave"><span class="fas fa-key"></span> <br />Genera</a>
                                     <a href="#" class="btn btn-danger btn-lg" role="button"><span class="fas fa-key fa-level-up-alt"></span> <br />Rilascia</a>
                                     <a href="#" class="btn btn-info btn-lg" role="button"><span class="fas fa-euro-sign"></span> <br />Paga</a>
                                     <a href="#" class="btn btn-warning btn-lg" role="button"><span class="fas fa-file-pdf"></span> <br />Stampa</a>
@@ -134,4 +116,21 @@
             </tr>
         </tbody>
     </table>
+
+    <div id="generaChiave" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" data-backdrop="static">
+        <div class="modal-dialog  modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Chiave Generata</h4>
+                </div>
+                <div class="modal-body text-center">
+                    <p class="text-center"><h1><strong>{{generatedKey}}</strong></h1></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
 </div>

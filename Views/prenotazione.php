@@ -5,16 +5,14 @@
     <meta itemprop="name" content="Vip Parking main dashboard page" />
     <meta itemprop="description" content="Vip Parking main dashboard" />
     <meta name="description" content="Vip Parking main dashboard" />
-    <script src="Scripts\Vendor\js\moment.min.js" type="text/javascript"></script>
-    <script src="Scripts\Vendor\js\daterangepicker.min.js" type="text/javascript"></script>
-    <link href="Content\Vendor\css\daterangepicker.css" rel="stylesheet" />
-    <link href="Content\Public\styles\menu.css" rel="stylesheet" />
-    <link href="Content\Public\styles\prenotazione.css" rel="stylesheet" />
-    <script src="Scripts\Vendor\js\angular.min.js" type="text/javascript"></script>
-    <script src="Scripts\Public\appAngular.js" type="text/javascript"></script>
-    <script src="Scripts\Public\Service\prenotazioneService.js" type="text/javascript"></script>
-    <script src="Scripts\Public\Controller\prenotazioneController.js" type="text/javascript"></script>
-    <script src="Scripts\Vendor\js\checkout.js"></script>
+    <script src="..\Scripts\Vendor\js\moment.min.js" type="text/javascript"></script>
+    <script src="..\Scripts\Vendor\js\daterangepicker.min.js" type="text/javascript"></script>
+    <link href="..\Content\Vendor\css\daterangepicker.css" rel="stylesheet" />
+    <link href="..\Content\Public\styles\menu.css" rel="stylesheet" />
+    <link href="..\Content\Public\styles\prenotazione.css" rel="stylesheet" />
+    <script src="..\Scripts\Public\Service\prenotazioneService.js" type="text/javascript"></script>
+    <script src="..\Scripts\Public\Controller\prenotazioneController.js" type="text/javascript"></script>
+    <script src="..\Scripts\Vendor\js\checkout.js"></script>
 
     <title>Main Dashboard</title>
 </head>
@@ -246,13 +244,13 @@
                     <div class="radio">
                       <label>
                         <input type="radio" name="payment-option" id="payPalRadio" value="paypal" checked>
-                        <img src="Content\Public\img\paypal-mark.jpg" alt="Pay with Paypal" />
+                        <img src="..\Content\Public\img\paypal-mark.jpg" alt="Pay with Paypal" />
                       </label>
                     </div>
                     <div class="radio">
                       <label>
                         <input type="radio" name="payment-option" id="creditRadio" value="crediCard">
-                        <img height="48" src="Content\Public\img\card-mark.png" alt="Accepting Visa, Mastercard, Discover and American Express" />
+                        <img height="48" src="..\Content\Public\img\card-mark.png" alt="Accepting Visa, Mastercard, Discover and American Express" />
                       </label>
                     </div>
                     <div class="radio">
@@ -276,4 +274,4 @@
     </div>
 </body>
 </html>
-    <script src="Scripts\Public\paypal_local.js"></script>
+    <script src="..\Scripts\Public\paypal_local.js"></script>

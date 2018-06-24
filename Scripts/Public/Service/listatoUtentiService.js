@@ -4,7 +4,7 @@
     var _getElencoUtenti = function (filtri) {
         var deferred = $q.defer();
 
-        $http.post('Api/getElencoUtenti.php', filtri)
+        $http.post('../Api/getElencoUtenti.php', filtri)
             .then(function (result) {
                 // Success
                 angular.copy(result.data, _elencoUtenti);

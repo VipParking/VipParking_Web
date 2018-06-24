@@ -4,6 +4,7 @@
     $scope.listaUtentiBck = [];
     $scope.dataSelezionata = '';
     $scope.statoSelezionato = 'all';
+    $scope.generatedKey = null;
 
     $q.all([listatoUtentiService.getElencoUtenti()]).then(function (result) {
 
@@ -21,9 +22,9 @@
 
         var found_names = $.grep($scope.listaUtenti, function (v) {
             return (v.Codice != null && v.Codice.toLowerCase().indexOf(insertText) >= 0)
-                || (v.Cognome != null && v.Cognome.toLowerCase().startsWith(insertText) >= 0)
-                || (v.Nome != null && v.Nome.toLowerCase().startsWith(insertText) >= 0)
-                || (v.Targa != null && v.Targa.toLowerCase().startsWith(insertText) >= 0)
+                || (v.Cognome != null && v.Cognome.toLowerCase().startsWith(insertText))
+                || (v.Nome != null && v.Nome.toLowerCase().startsWith(insertText))
+                || (v.Targa != null && v.Targa.toLowerCase().startsWith(insertText))
                 || (v.Chiave != null && v.Chiave.toLowerCase().indexOf(insertText) >= 0);
         });
 
@@ -64,6 +65,10 @@
 
         $scope.listaUtenti = found_names;
 
+    };
+
+    $scope.generateRandomKey = function () {
+        $scope.generatedKey = 1 + Math.floor(Math.random() * 50);
     };
 
 }]);

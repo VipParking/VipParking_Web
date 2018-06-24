@@ -7,3 +7,5 @@
     <link href="Content\Vendor\css\fontawesome-all.min.css" rel="stylesheet" />
     <script src="Scripts\Vendor\js\jquery-2.2.4.min.js" type="text/javascript"></script>
     <script src="Scripts\Vendor\js\bootstrap.min.js" type="text/javascript"></script>
+    <script src="Scripts\Vendor\js\angular.min.js" type="text/javascript"></script>
+    <script src="Scripts\Public\appAngular.js" type="text/javascript"></script>

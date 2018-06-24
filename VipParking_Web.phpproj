@@ -16,16 +16,20 @@
     <IncludeDebugInformation>false</IncludeDebugInformation>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Api\getElencoClienti.php" />
     <Compile Include="Api\getElencoUtenti.php" />
-    <Compile Include="chart.php" />
     <Compile Include="head.php" />
+    <Compile Include="Views\chart.php" />
+    <Compile Include="Views\clienti.php" />
+    <Compile Include="Views\head.php" />
     <Compile Include="index.php" />
-    <Compile Include="listatoUtenti.php" />
-    <Compile Include="mainDashboard.php" />
-    <Compile Include="menu.php" />
-    <Compile Include="prenotazione.php" />
-    <Compile Include="report.php" />
-    <Compile Include="tariffario.php" />
+    <Compile Include="Views\listatoClienti.php" />
+    <Compile Include="Views\listatoUtenti.php" />
+    <Compile Include="Views\mainDashboard.php" />
+    <Compile Include="Views\menu.php" />
+    <Compile Include="Views\prenotazione.php" />
+    <Compile Include="Views\report.php" />
+    <Compile Include="Views\tariffario.php" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\" />
@@ -38,6 +42,7 @@
     <Folder Include="Content\Vendor\fonts\" />
     <Folder Include="Api\" />
     <Folder Include="Content\Vendor\webfonts\" />
+    <Folder Include="Views\" />
     <Folder Include="Scripts\" />
     <Folder Include="Scripts\Public\" />
     <Folder Include="Scripts\Public\Controller\" />
@@ -85,12 +90,14 @@
     <Content Include="Content\Vendor\webfonts\fa-solid-900.woff" />
     <Content Include="Content\Vendor\webfonts\fa-solid-900.woff2" />
     <Content Include="Scripts\Public\appAngular.js" />
+    <Content Include="Scripts\Public\Controller\listatoClientiController.js" />
     <Content Include="Scripts\Public\Controller\prenotazioneController.js" />
     <Content Include="Scripts\Public\Controller\listatoUtentiController.js" />
     <Content Include="Scripts\Public\dashboard.js" />
     <Content Include="Scripts\Public\login.js" />
     <Content Include="Scripts\Public\paypal_local.js" />
     <Content Include="Scripts\Public\report.js" />
+    <Content Include="Scripts\Public\Service\listatoClientiService.js" />
     <Content Include="Scripts\Public\Service\prenotazioneService.js" />
     <Content Include="Scripts\Public\Service\listatoUtentiService.js" />
     <Content Include="Scripts\Vendor\js\angular.min.js" />
